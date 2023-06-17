@@ -11,22 +11,16 @@
 
 <body class="bg-gray-950 text-white text-xl p-5">
   <div class="flex flex-col justify-center items-center"><!-- container -->
-    <div class="text text-center my-10 text-3xl">Rock Paper Scissors</div>
+    <div class="text text-center mb-10 text-3xl">Rock Paper Scissors</div>
 
     <div class="flex flex-col sm:flex-row justify-center mb-10">
-      <button
-        class="flex justify-center items-center bg-transparent border-4 m-2 border-green-500 w-40 h-40 text-white rounded-full cursor-pointer hover:bg-gray-700 active:bg-gray-500 transition duration-150"
-        onclick="playGamePick('rock');">
+      <button class="js-rock-btn flex justify-center items-center bg-transparent border-4 m-2 border-green-500 w-40 h-40 text-white rounded-full cursor-pointer hover:bg-gray-700 active:bg-gray-500 transition duration-150">
         <img class="w-20 h-20" src="img/rock.png" alt="rock">
       </button>
-      <button
-        class="flex justify-center items-center bg-transparent border-4 m-2 border-green-500 w-40 h-40 text-white rounded-full cursor-pointer hover:bg-gray-700 active:bg-gray-500 transition duration-150"
-        onclick="playGamePick('paper');">
+      <button class="js-paper-btn flex justify-center items-center bg-transparent border-4 m-2 border-green-500 w-40 h-40 text-white rounded-full cursor-pointer hover:bg-gray-700 active:bg-gray-500 transition duration-150">
         <img class="w-20 h-20" src="img/paper.png" alt="rock">
       </button>
-      <button
-        class="flex justify-center items-center bg-transparent border-4 m-2 border-green-500 w-40 h-40 text-white rounded-full cursor-pointer hover:bg-gray-700 active:bg-gray-500 transition duration-150"
-        onclick="playGamePick('scissors');">
+      <button class="js-scissors-btn flex justify-center items-center bg-transparent border-4 m-2 border-green-500 w-40 h-40 text-white rounded-full cursor-pointer hover:bg-gray-700 active:bg-gray-500 transition duration-150">
         <img class="w-20 h-20" src="img/scissors.png" alt="rock">
       </button>
     </div>
@@ -37,15 +31,12 @@
 
     <p class="js-score text-center mb-10"></p>
 
-    <div
-      class="bg-red-500 w-40 h-10 rounded-full items-center flex justify-center justify-center cursor-pointer hover:bg-red-400 active:bg-red-300 transition duration-150">
-      <button onclick="
-            score.wins = 0;
-            score.losses = 0;
-            score.ties = 0;
-            localStorage.removeItem('score');
-            updateScoreElement();
-          ">Reset Score</button>
+    <div class="js-resetscore-btn bg-red-500 w-40 h-10 rounded-full items-center flex justify-center justify-center cursor-pointer hover:bg-red-400 active:bg-red-300 transition duration-150">
+      <button>Reset Score</button>
+    </div>
+    
+    <div class="js-autoplay-btn mt-2 text-5xl">
+      <button class="js-autoplay-emoji">🤖</button>
     </div>
 
   </div><!-- end container -->
